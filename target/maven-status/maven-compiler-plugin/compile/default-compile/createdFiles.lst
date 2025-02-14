@@ -1,0 +1,6 @@
+com\pairlearning\expensetracker\ExpenseTrackerApiApplication.class
+com\pairlearning\expensetracker\exceptions\EtAuthException.class
+com\pairlearning\expensetracker\repositories\UserRepository.class
+com\pairlearning\expensetracker\Constants.class
+com\pairlearning\expensetracker\domain\User.class
+com\pairlearning\expensetracker\repositories\UserRepositoryImpl.class

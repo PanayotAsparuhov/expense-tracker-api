@@ -1,0 +1,243 @@
+{
+    "info": {
+        "name": "Expense Tracker API",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "User Registration",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "url": {
+                    "raw": "http://localhost:8080/api/users/register",
+                    "host": [
+                        "localhost:8080"
+                    ],
+                    "path": [
+                        "api",
+                        "users",
+                        "register"
+                    ]
+                },
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"firstName\": \"Petar\",\n    \"lastName\": \"Smith\",\n    \"email\": \"petar@testmail.com\",\n    \"password\": \"test123\"\n}"
+                }
+            }
+        },
+        {
+            "name": "User Login",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "url": {
+                    "raw": "http://localhost:8080/api/users/login",
+                    "host": [
+                        "localhost:8080"
+                    ],
+                    "path": [
+                        "api",
+                        "users",
+                        "login"
+                    ]
+                },
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"email\": \"david@testmail.com\",\n    \"password\": \"test123\"\n}"
+                }
+            }
+        },
+        {
+            "name": "Get Category",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "http://localhost:8080/api/categories/11",
+                    "host": [
+                        "localhost:8080"
+                    ],
+                    "path": [
+                        "api",
+                        "categories",
+                        "11"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Update Category",
+            "request": {
+                "method": "PUT",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "url": {
+                    "raw": "http://localhost:8080/api/categories/11",
+                    "host": [
+                        "localhost:8080"
+                    ],
+                    "path": [
+                        "api",
+                        "categories",
+                        "11"
+                    ]
+                },
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"title\": \"Shoppingg\",\n    \"description\": \"Shopping expenses\"\n}"
+                }
+            }
+        },
+        {
+            "name": "Create Transaction",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "url": {
+                    "raw": "http://localhost:8080/api/categories/11/transactions",
+                    "host": [
+                        "localhost:8080"
+                    ],
+                    "path": [
+                        "api",
+                        "categories",
+                        "11",
+                        "transactions"
+                    ]
+                },
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"amount\": 2150,\n    \"note\": \"transaction note\",\n    \"transactionDate\": 1700000000000\n}"
+                }
+            }
+        },
+        {
+            "name": "Get Transactions",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "http://localhost:8080/api/categories/11/transactions",
+                    "host": [
+                        "localhost:8080"
+                    ],
+                    "path": [
+                        "api",
+                        "categories",
+                        "11",
+                        "transactions"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Update Transaction",
+            "request": {
+                "method": "PUT",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "url": {
+                    "raw": "http://localhost:8080/api/categories/11/transactions/1004",
+                    "host": [
+                        "localhost:8080"
+                    ],
+                    "path": [
+                        "api",
+                        "categories",
+                        "11",
+                        "transactions",
+                        "1004"
+                    ]
+                },
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"amount\": 4350.0,\n    \"note\": \"Some transaction note\",\n    \"transactionDate\": 1700000000000\n}"
+                }
+            }
+        },
+        {
+            "name": "Delete Transaction",
+            "request": {
+                "method": "DELETE",
+                "url": {
+                    "raw": "http://localhost:8080/api/categories/11/transactions/1003",
+                    "host": [
+                        "localhost:8080"
+                    ],
+                    "path": [
+                        "api",
+                        "categories",
+                        "11",
+                        "transactions",
+                        "1003"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Create Category",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "url": {
+                    "raw": "http://localhost:8080/api/categories",
+                    "host": [
+                        "localhost:8080"
+                    ],
+                    "path": [
+                        "api",
+                        "categories"
+                    ]
+                },
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"title\": \"Some Category Title\",\n    \"description\": \"A category description\"\n}"
+                }
+            }
+        },
+        {
+            "name": "Delete Category",
+            "request": {
+                "method": "DELETE",
+                "url": {
+                    "raw": "http://localhost:8080/api/categories/1",
+                    "host": [
+                        "localhost:8080"
+                    ],
+                    "path": [
+                        "api",
+                        "categories",
+                        "1"
+                    ]
+                }
+            }
+        }
+    ]
+}
